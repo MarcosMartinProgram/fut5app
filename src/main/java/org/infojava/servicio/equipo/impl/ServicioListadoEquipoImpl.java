@@ -74,7 +74,7 @@ public class ServicioListadoEquipoImpl implements ServicioListadoEquipo {
         Equipo equipo = new ServicioEquipoImpl().buscarEquipo(nombreEquipo);
         if (equipo != null) {
             try {
-                String rutaArchivoSalida = "src/main/java/org/informatorio/resources/jugadores_equipo_salida.txt";
+                String rutaArchivoSalida = "src/main/java/org/infojava/resources/jugadores_equipo_salida.txt";
                 ServicioSalidaArchivo salidaArchivo = new ServicioSalidaArchivoImpl();
                 salidaArchivo.exportarJugadoresEquipo(equipo.getListaDeJugadores(), rutaArchivoSalida);
                 System.out.println("Lista de jugadores exportados en archivo 'jugadores_equipo_salida.txt'.");
@@ -104,7 +104,7 @@ public class ServicioListadoEquipoImpl implements ServicioListadoEquipo {
                     "\n\n";
         }
         try {
-            String rutaArchivoSalida = "src/main/java/org/informatorio/resources/equipos.txt";
+            String rutaArchivoSalida = "src/main/java/org/infojava/resources/equipos.txt";
             new ServicioSalidaArchivoImpl().exportarAArchivo(listadoEquipos, rutaArchivoSalida);
             System.out.println("Lista de equipos ordenados por nombre de jugador exportada en archivo 'equipos.txt'.");
         } catch (IOException e) {

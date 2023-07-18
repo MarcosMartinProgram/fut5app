@@ -1,0 +1,5 @@
+Juan;Pérez;1.80;10;Delantero;true;9
+María;Gómez;1.65;5;Mediocampista;false;7
+Carlos;Rodríguez;1.75;2;Defensor;false;3
+Roberto;Coria;1.90;1;Arquero;false;4
+Jose;Fuhr;1.74;5;Mediocampista;false;8

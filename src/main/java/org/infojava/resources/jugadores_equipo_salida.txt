@@ -1,0 +1,5 @@
+Juan;Pérez;1.8;10;org.infojava.dominio.Posicion@6996db8;true;9;boca
+María;Gómez;1.65;5;org.infojava.dominio.Posicion@1963006a;false;7;boca
+Carlos;Rodríguez;1.75;2;org.infojava.dominio.Posicion@7fbe847c;false;3;boca
+Roberto;Coria;1.9;1;org.infojava.dominio.Posicion@41975e01;false;4;boca
+Jose;Fuhr;1.74;5;org.infojava.dominio.Posicion@c2e1f26;false;8;boca

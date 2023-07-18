@@ -7,6 +7,7 @@ import org.infojava.servicio.entrenador.ServicioEntrenador;
 import java.time.LocalDate;
 
 public class ServicioEntrenadorImpl implements ServicioEntrenador {
+
     @Override
     public Entrenador crearEntrenador() {
         String nombre = "";

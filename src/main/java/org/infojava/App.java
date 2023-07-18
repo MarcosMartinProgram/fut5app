@@ -18,9 +18,9 @@ public class App
         new GestionMenu().gestionarMenu();
         ServicioConsola.cerrarScanner();
 
-        String rutaArchivo = "org/infojava/resources/jugadores_entrada.txt";
+        String rutaArchivo = "org/infojava/resources/jugadores.txt";
 
         String rutaDeDestino = "org/infojava/resources/jugadores_salida.txt";
-        
+
     }
 }

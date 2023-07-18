@@ -6,6 +6,7 @@ import org.infojava.dominio.Jugador;
 import org.infojava.servicio.entrada.file.ServicioEntradaArchivo;
 import org.infojava.servicio.entrada.file.impl.ServicioConsola;
 import org.infojava.servicio.entrada.file.impl.ServicioEntradaArchivoImpl;
+import org.infojava.servicio.entrenador.ServicioEntrenador;
 import org.infojava.servicio.entrenador.impl.ServicioEntrenadorImpl;
 import org.infojava.servicio.equipo.ServicioEquipo;
 import org.infojava.servicio.inicio.impl.ServicioInicioImpl;
@@ -20,6 +21,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ServicioEquipoImpl implements ServicioEquipo {
+
+    private ServicioEntrenador servicioEntrenador = new ServicioEntrenadorImpl();
     @Override
     public void crearEquipo() {
         String entrada = "";
@@ -39,7 +42,7 @@ public class ServicioEquipoImpl implements ServicioEquipo {
 
             System.out.println();
 
-            Entrenador entrenador = new ServicioEntrenadorImpl().crearEntrenador();
+            Entrenador entrenador = servicioEntrenador.crearEntrenador();
 
             List<Jugador> jugadores = this.cargarJugadores();
 
@@ -58,7 +61,7 @@ public class ServicioEquipoImpl implements ServicioEquipo {
         String agregaDesdeArchivo = new ServicioConsola().solicitarSiNo("¿Agregar jugadores desde archivo 'jugadores.txt'?");
 
         if (agregaDesdeArchivo.equalsIgnoreCase("S")) {
-            String rutaArchivo = "src/main/java/org/informatorio/resources/jugadores.txt";
+            String rutaArchivo = "src/main/java/org/infojava/resources/jugadores.txt";
             ServicioEntradaArchivo entradaArchivo = new ServicioEntradaArchivoImpl();
             return entradaArchivo.cargarJugadoresDesdeArchivo(rutaArchivo);
         } else {
